@@ -1,6 +1,4 @@
-#BEGIN Really Simple SSL LETS ENCRYPT
-RewriteRule ^.well-known/(.*)$ - [L]
-#END Really Simple SSL LETS ENCRYPT
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
@@ -8,11 +6,11 @@ RewriteRule ^.well-known/(.*)$ - [L]
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /portfolio/
+RewriteBase /portfolio-web/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /portfolio/index.php [L]
+RewriteRule . /portfolio-web/index.php [L]
 </IfModule>
 
 # END WordPress
